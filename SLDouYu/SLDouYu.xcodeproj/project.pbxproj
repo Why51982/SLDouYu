@@ -15,6 +15,8 @@
 		73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */; };
 		73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */; };
 		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
+		73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */; };
+		73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADEB1DBE41A60051A328 /* SLConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLiveViewController.swift; sourceTree = "<group>"; };
 		73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileViewController.swift; sourceTree = "<group>"; };
 		73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SLExtension.swift"; sourceTree = "<group>"; };
+		73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageTitleView.swift; sourceTree = "<group>"; };
+		73FEADEB1DBE41A60051A328 /* SLConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLConst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				73FEADE61DBE29450051A328 /* Extension */,
+				73FEADEB1DBE41A60051A328 /* SLConst.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 		73712D751DBDFBDC00EED45D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,9 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */,
+				73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */,
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
+				73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,
 				73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */,
 				73712D581DBDF2B900EED45D /* AppDelegate.swift in Sources */,
@@ -438,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SLDouYu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.001bank.SLDouYu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SLDouYu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.001bank.SLDouYu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
