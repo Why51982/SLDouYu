@@ -14,6 +14,7 @@
 		73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */; };
 		73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */; };
 		73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */; };
+		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFollowViewController.swift; sourceTree = "<group>"; };
 		73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLiveViewController.swift; sourceTree = "<group>"; };
 		73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileViewController.swift; sourceTree = "<group>"; };
+		73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SLExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +71,10 @@
 		73712D691DBDF97D00EED45D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				73712D6A1DBDF97D00EED45D /* Follow */,
+				73712D6D1DBDF97D00EED45D /* Main */,
 				73712D6B1DBDF97D00EED45D /* Home */,
 				73712D6C1DBDF97D00EED45D /* Live */,
-				73712D6D1DBDF97D00EED45D /* Main */,
+				73712D6A1DBDF97D00EED45D /* Follow */,
 				73712D6E1DBDF97D00EED45D /* Profile */,
 				73712D6F1DBDF97D00EED45D /* Tools */,
 			);
@@ -132,6 +134,7 @@
 		73712D6F1DBDF97D00EED45D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				73FEADE61DBE29450051A328 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -246,6 +249,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		73FEADE61DBE29450051A328 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,6 +333,7 @@
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,
+				73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */,
 				73712D581DBDF2B900EED45D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +477,7 @@
 				73712D681DBDF2B900EED45D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

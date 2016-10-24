@@ -13,23 +13,38 @@ class SLHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //设置UI界面
+        setupUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+//MARK: - 设置UI界面
+extension SLHomeViewController {
+    
+    //设置UI界面
+    fileprivate func setupUI() {
+        
+        //设置导航栏
+        setupNavigationBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setupNavigationBar() {
+        
+        //设置导航栏左边的按钮
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(named: "logo"), for: UIControlState.normal)
+        button.sizeToFit()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+        
+        //设置导航栏右边的按钮
+        let size = CGSize(width: 40, height: 40)
+        //历史
+        let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
+        //搜索
+        let searchItem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
+        //二维码
+        let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
+        navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
     }
-    */
-
 }
