@@ -14,6 +14,8 @@
 		73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */; };
 		73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */; };
 		73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */; };
+		737AAA741DBEF20C00A86A4E /* SLPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */; };
+		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
 		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
 		73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */; };
 		73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADEB1DBE41A60051A328 /* SLConst.swift */; };
@@ -29,6 +31,8 @@
 		73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFollowViewController.swift; sourceTree = "<group>"; };
 		73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLiveViewController.swift; sourceTree = "<group>"; };
 		73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileViewController.swift; sourceTree = "<group>"; };
+		737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageContentView.swift; sourceTree = "<group>"; };
+		737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SLExtension.swift"; sourceTree = "<group>"; };
 		73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SLExtension.swift"; sourceTree = "<group>"; };
 		73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageTitleView.swift; sourceTree = "<group>"; };
 		73FEADEB1DBE41A60051A328 /* SLConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLConst.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */,
+				737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */,
+				737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -338,9 +344,11 @@
 				73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */,
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
+				737AAA741DBEF20C00A86A4E /* SLPageContentView.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
 				73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,
+				737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */,
 				73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */,
 				73712D581DBDF2B900EED45D /* AppDelegate.swift in Sources */,
 			);

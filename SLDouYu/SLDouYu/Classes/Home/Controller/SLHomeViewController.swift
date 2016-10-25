@@ -13,12 +13,31 @@ private let kTitleViewH: CGFloat = 40
 class SLHomeViewController: UIViewController {
     
     //MARK: - 懒加载
-    fileprivate lazy var pageTitleView: SLPageTitleView = {
+    fileprivate lazy var pageTitleView: SLPageTitleView = {[weak self] in
        
+        let titles: [String] = ["推荐", "游戏", "娱乐", "趣玩"]
         let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let pageTitleView = SLPageTitleView(frame: frame, titles: titles)
+        pageTitleView.delegate = self
+        
         return pageTitleView
+    }()
+    
+    fileprivate lazy var pageContentView: SLPageContentView = {[weak self] in
+        //设置frame
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: kScreenH - kStatusBarH + kNavigationBarH)
+        
+        //确定所有子控制器
+        var childViewControllers = [UIViewController]()
+        for _ in 0 ..< 4 {
+            let viewController = UIViewController()
+            viewController.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childViewControllers.append(viewController)
+        }
+        
+        let pageContentView = SLPageContentView(frame: contentFrame, childViewControllers: childViewControllers, parentViewController: self)
+        
+        return pageContentView
     }()
 
     //MARK: - 系统回调函数
@@ -48,6 +67,9 @@ extension SLHomeViewController {
         
         //添加titleView
         view.addSubview(pageTitleView)
+        
+        //添加pageContentView
+        view.addSubview(pageContentView)
     }
     
     private func setupNavigationBar() {
@@ -67,5 +89,13 @@ extension SLHomeViewController {
         //二维码
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
+    }
+}
+
+//MARK: - SLpageTitleViewDelegate
+extension SLHomeViewController: SLpageTitleViewDelegate {
+    
+    func pageTitleView(_ pageTitleView: SLPageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(index)
     }
 }

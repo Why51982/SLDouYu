@@ -10,10 +10,18 @@ import UIKit
 
 private let kScrollLineH: CGFloat = 2
 
+//MARK: - 代理
+protocol SLpageTitleViewDelegate: class {
+    
+    func pageTitleView(_ pageTitleView: SLPageTitleView, selectedIndex index: Int)
+}
+
 class SLPageTitleView: UIView {
     
     //MARK: - 定义属性
     fileprivate var titles: [String]
+    fileprivate var currentIndex: Int = 0
+    weak var delegate: SLpageTitleViewDelegate?
     
     //MARK: - 懒加载
     fileprivate lazy var scrollView: UIScrollView = {
@@ -93,6 +101,11 @@ extension SLPageTitleView {
             //将Label添加到scrollView上
             scrollView.addSubview(label)
             titleLabels.append(label)
+            
+            //给Label添加手势
+            label.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.labelDidTap(tapGesture:)))
+            label.addGestureRecognizer(tap)
         }
     }
     
@@ -114,5 +127,34 @@ extension SLPageTitleView {
         //设置scrollLine的属性
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabe.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabe.frame.width, height: kScrollLineH)
+    }
+}
+
+//MARK: - Label的手势点击事件
+extension SLPageTitleView {
+    
+    @objc fileprivate func labelDidTap(tapGesture: UITapGestureRecognizer) {
+        
+        //获取当前点击的Label
+        guard let currentLabel = tapGesture.view as? UILabel else { return }
+        
+        //获取以前的Label
+        let oldLabel = titleLabels[currentIndex]
+        
+        //保存最新Label的下标值
+        currentIndex = currentLabel.tag
+        
+        //切换文字的颜色
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        //移动底部显示条
+        let scrollLineX = CGFloat(currentIndex) * currentLabel.bounds.width
+        UIView.animate(withDuration: 0.2) { 
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        //通知代理
+        delegate?.pageTitleView(self, selectedIndex: currentIndex)
     }
 }
