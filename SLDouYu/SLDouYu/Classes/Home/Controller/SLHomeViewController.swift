@@ -25,11 +25,13 @@ class SLHomeViewController: UIViewController {
     
     fileprivate lazy var pageContentView: SLPageContentView = {[weak self] in
         //设置frame
-        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: kScreenH - kStatusBarH + kNavigationBarH)
+        let height = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabBarH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: height)
         
         //确定所有子控制器
         var childViewControllers = [UIViewController]()
-        for _ in 0 ..< 4 {
+        childViewControllers.append(SLRecommendViewController())
+        for _ in 0 ..< 3 {
             let viewController = UIViewController()
             viewController.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childViewControllers.append(viewController)

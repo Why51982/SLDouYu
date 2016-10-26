@@ -151,7 +151,7 @@ extension SLPageContentView: UICollectionViewDelegate {
             targetIndex = Int(currentOffsetX / scrollViewW)
         }
         
-        print("progress: \(progress), source: \(sourceIndex), target: \(targetIndex)")
+//        print("progress: \(progress), source: \(sourceIndex), target: \(targetIndex)")
         //通知代理
         delegate?.pageContentViewDidScroll(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
