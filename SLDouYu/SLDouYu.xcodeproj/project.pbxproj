@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */; };
 		73712D581DBDF2B900EED45D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D571DBDF2B900EED45D /* AppDelegate.swift */; };
 		73712D5F1DBDF2B900EED45D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73712D5E1DBDF2B900EED45D /* Assets.xcassets */; };
 		73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D7C1DBDFCEC00EED45D /* SLMainViewController.swift */; };
@@ -14,7 +15,6 @@
 		73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */; };
 		73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */; };
 		73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */; };
-		737AAA741DBEF20C00A86A4E /* SLPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */; };
 		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
 		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
 		73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */; };
@@ -344,9 +344,9 @@
 				73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */,
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
-				737AAA741DBEF20C00A86A4E /* SLPageContentView.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
 				73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */,
+				736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,
 				737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */,
 				73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */,

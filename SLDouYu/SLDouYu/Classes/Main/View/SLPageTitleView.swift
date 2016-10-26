@@ -8,20 +8,24 @@
 
 import UIKit
 
-private let kScrollLineH: CGFloat = 2
 
-//MARK: - 代理
-protocol SLpageTitleViewDelegate: class {
+//MARK: - 定义代理
+protocol SLPageTitleViewDelegate: class {
     
     func pageTitleView(_ pageTitleView: SLPageTitleView, selectedIndex index: Int)
 }
+
+//MARK: - 定义常量
+private let kScrollLineH: CGFloat = 2
+private let kNormalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let kSelectedColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
 class SLPageTitleView: UIView {
     
     //MARK: - 定义属性
     fileprivate var titles: [String]
     fileprivate var currentIndex: Int = 0
-    weak var delegate: SLpageTitleViewDelegate?
+    weak var delegate: SLPageTitleViewDelegate?
     
     //MARK: - 懒加载
     fileprivate lazy var scrollView: UIScrollView = {
@@ -156,5 +160,32 @@ extension SLPageTitleView {
         
         //通知代理
         delegate?.pageTitleView(self, selectedIndex: currentIndex)
+    }
+}
+
+//MARK: - 暴露在外部的方法
+extension SLPageTitleView {
+    func changeTitleIndicator(_ progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        //1.取出sourceLabel和targentLabel
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+        //2.处理标题下面划线的滑动
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //3.颜色渐变
+        //3.1取出颜色变化的范围
+        let colorDelta = (kSelectedColor.0 - kNormalColor.0, kSelectedColor.1 - kNormalColor.1, kSelectedColor.2 - kNormalColor.2)
+        
+        //3.2变化sourceLabel的颜色
+        sourceLabel.textColor = UIColor(r: kSelectedColor.0 - colorDelta.0 * progress, g: kSelectedColor.1 - colorDelta.1 * progress, b: kSelectedColor.2 - colorDelta.2 * progress)
+        
+        //3.3变化targetLabel的颜色
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        currentIndex = targetIndex
     }
 }

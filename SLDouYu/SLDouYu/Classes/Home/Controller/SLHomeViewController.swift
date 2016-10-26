@@ -36,6 +36,7 @@ class SLHomeViewController: UIViewController {
         }
         
         let pageContentView = SLPageContentView(frame: contentFrame, childViewControllers: childViewControllers, parentViewController: self)
+        pageContentView.delegate = self
         
         return pageContentView
     }()
@@ -93,9 +94,17 @@ extension SLHomeViewController {
 }
 
 //MARK: - SLpageTitleViewDelegate
-extension SLHomeViewController: SLpageTitleViewDelegate {
+extension SLHomeViewController: SLPageTitleViewDelegate {
     
     func pageTitleView(_ pageTitleView: SLPageTitleView, selectedIndex index: Int) {
+        
         pageContentView.setCurrentIndex(index)
+    }
+}
+
+//MARK: - SLPageContentViewDelegate
+extension SLHomeViewController: SLPageContentViewDelegate {
+    func pageContentViewDidScroll(_ pageContentView: SLPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.changeTitleIndicator(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
