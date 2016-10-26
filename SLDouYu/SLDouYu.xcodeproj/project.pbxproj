@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735BBC641DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BBC621DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift */; };
+		735BBC651DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735BBC631DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib */; };
+		735BBC681DC0DA5600AB9E3C /* SLCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BBC661DC0DA5600AB9E3C /* SLCollectionNormalCell.swift */; };
+		735BBC691DC0DA5600AB9E3C /* SLCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735BBC671DC0DA5600AB9E3C /* SLCollectionNormalCell.xib */; };
+		735BBC6C1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BBC6A1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift */; };
+		735BBC6D1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735BBC6B1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib */; };
 		736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */; };
 		736042171DC08CD600AA2928 /* SLRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736042161DC08CD600AA2928 /* SLRecommendViewController.swift */; };
 		73712D581DBDF2B900EED45D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D571DBDF2B900EED45D /* AppDelegate.swift */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		735BBC621DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionHeaderView.swift; sourceTree = "<group>"; };
+		735BBC631DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCollectionHeaderView.xib; sourceTree = "<group>"; };
+		735BBC661DC0DA5600AB9E3C /* SLCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionNormalCell.swift; sourceTree = "<group>"; };
+		735BBC671DC0DA5600AB9E3C /* SLCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCollectionNormalCell.xib; sourceTree = "<group>"; };
+		735BBC6A1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionPrettyCell.swift; sourceTree = "<group>"; };
+		735BBC6B1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCollectionPrettyCell.xib; sourceTree = "<group>"; };
 		736042161DC08CD600AA2928 /* SLRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendViewController.swift; sourceTree = "<group>"; };
 		73712D541DBDF2B900EED45D /* SLDouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLDouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73712D571DBDF2B900EED45D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +181,8 @@
 		73712D721DBDFBCA00EED45D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				735BBC621DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift */,
+				735BBC631DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +207,10 @@
 			children = (
 				73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */,
 				737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */,
+				735BBC661DC0DA5600AB9E3C /* SLCollectionNormalCell.swift */,
+				735BBC671DC0DA5600AB9E3C /* SLCollectionNormalCell.xib */,
+				735BBC6A1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift */,
+				735BBC6B1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +350,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735BBC691DC0DA5600AB9E3C /* SLCollectionNormalCell.xib in Resources */,
+				735BBC651DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib in Resources */,
+				735BBC6D1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib in Resources */,
 				73712D5F1DBDF2B900EED45D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,9 +369,12 @@
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
+				735BBC6C1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift in Sources */,
+				735BBC641DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift in Sources */,
 				73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */,
 				736042171DC08CD600AA2928 /* SLRecommendViewController.swift in Sources */,
 				736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */,
+				735BBC681DC0DA5600AB9E3C /* SLCollectionNormalCell.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,
 				737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */,
 				73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */,

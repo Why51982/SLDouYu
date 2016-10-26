@@ -11,10 +11,12 @@ import UIKit
 //MARK: - 定义常量
 private let kItemMargin: CGFloat = 10
 private let kItemW: CGFloat = (kScreenW - 3 * kItemMargin) / 2
-private let kItemH: CGFloat = kItemW * 3 / 4
+private let kNormalItemH: CGFloat = kItemW * 3 / 4
+private let kPrettyItemH: CGFloat = kItemW * 4 / 3
 private let kHeaderViewH: CGFloat = 50
 
-private let kCellReuseIdentifier = "kCellReuseIdentifier"
+private let kNormalCellReuseIdentifier = "kNormalCellReuseIdentifier"
+private let kPrettyCellReuseIdentifier = "kPrettyCellReuseIdentifier"
 private let kHeaderViewReuseIdentifier = "kHeaderViewReuseIdentifier"
 
 class SLRecommendViewController: UIViewController {
@@ -24,7 +26,6 @@ class SLRecommendViewController: UIViewController {
        
         //创建布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 10
         //设置头部
@@ -33,16 +34,18 @@ class SLRecommendViewController: UIViewController {
         //创建UICollectionView
         let collectionView: UICollectionView = UICollectionView(frame: self!.view.bounds, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.gray
+        collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
+        collectionView.delegate = self
         layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
         //让collectionView随着父控件的宽高拉升
         collectionView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
         
         //注册cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCellReuseIdentifier)
+        collectionView.register(UINib(nibName: "SLCollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellReuseIdentifier)
+        collectionView.register(UINib(nibName: "SLCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellReuseIdentifier)
         //注册headerView
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewReuseIdentifier)
+        collectionView.register(UINib(nibName: "SLCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewReuseIdentifier)
         
         return collectionView
     }()
@@ -52,6 +55,7 @@ class SLRecommendViewController: UIViewController {
         
         //设置UI界面
         setupUI()
+        
     }
 }
 
@@ -67,7 +71,7 @@ extension SLRecommendViewController {
 }
 
 //MARK: - UICollectionViewDataSource
-extension SLRecommendViewController: UICollectionViewDataSource {
+extension SLRecommendViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -76,21 +80,27 @@ extension SLRecommendViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 8
         }
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+        //定义cell
+        var cell: UICollectionViewCell!
         //获取cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellReuseIdentifier, for: indexPath)
-        
-        cell.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+        if indexPath.section == 1 {
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellReuseIdentifier, for: indexPath)
+        } else {
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellReuseIdentifier, for: indexPath)
+        }
         
         return cell
     }
     
+    //定义headerView
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         //获取headerView
@@ -98,5 +108,16 @@ extension SLRecommendViewController: UICollectionViewDataSource {
         
         
         return headerView
+    }
+    
+    //UICollectionViewDelegateFlowLayout - 定义item的大小
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        //如果为颜值组(第一组),修改尺寸
+        if indexPath.section == 1 {
+            return CGSize(width: kItemW, height: kPrettyItemH)
+        }
+        
+        return CGSize(width: kItemW, height: kNormalItemH)
     }
 }
