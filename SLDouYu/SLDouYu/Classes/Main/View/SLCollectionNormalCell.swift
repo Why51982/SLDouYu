@@ -10,9 +10,12 @@ import UIKit
 
 class SLCollectionNormalCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+    //MARK: - 控件属性
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var onlineLabel: UIButton!
+    
+    //MARK: - 定义属性
+    var anchor: SLAnchor?
 }

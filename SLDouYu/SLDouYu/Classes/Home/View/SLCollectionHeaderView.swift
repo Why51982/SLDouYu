@@ -10,9 +10,16 @@ import UIKit
 
 class SLCollectionHeaderView: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    //MARK: - 控件属性
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    //MARK: - 定义属性
+    var group: SLAnchorGroup? {
+        didSet {
+            iconImageView.image = UIImage(named: group?.icon_url ?? "home_header_normal")
+            titleLabel.text = group?.tag_name
+        }
     }
     
 }

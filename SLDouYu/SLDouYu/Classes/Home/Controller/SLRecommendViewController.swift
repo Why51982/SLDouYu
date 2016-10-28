@@ -22,6 +22,9 @@ private let kHeaderViewReuseIdentifier = "kHeaderViewReuseIdentifier"
 class SLRecommendViewController: UIViewController {
     
     //MARK: - 懒加载
+    /// 网络请求的VM
+    fileprivate lazy var recommendVM: SLRecommendViewModel = SLRecommendViewModel()
+    /// 创建collectionView
     fileprivate lazy var collectionView: UICollectionView = {[weak self] in
        
         //创建布局
@@ -59,7 +62,7 @@ class SLRecommendViewController: UIViewController {
     }
 }
 
-//MARK: - 设置UI界面
+//MARK: - 设置UI界面内容
 extension SLRecommendViewController {
     
     //设置UI
@@ -67,6 +70,21 @@ extension SLRecommendViewController {
         
         //添加collectionView
         view.addSubview(collectionView)
+        
+        //发送网络请求
+        loadData()
+    }
+}
+
+//MARK: - 请求网络数据
+extension SLRecommendViewController {
+    
+    //请求网络数据
+    fileprivate func loadData() {
+        
+        recommendVM.requestData { 
+            self.collectionView.reloadData()
+        }
     }
 }
 
@@ -75,26 +93,29 @@ extension SLRecommendViewController: UICollectionViewDataSource, UICollectionVie
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return 8
+        return recommendVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        
+        return recommendVM.anchorGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //定义cell
         var cell: UICollectionViewCell!
+        
+        //取出模型数据
+//        let anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
         //获取cell
         if indexPath.section == 1 {
             
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellReuseIdentifier, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellReuseIdentifier, for: indexPath) as! SLCollectionPrettyCell
         } else {
             
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellReuseIdentifier, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellReuseIdentifier, for: indexPath) as! SLCollectionNormalCell
+            
         }
         
         return cell
@@ -104,8 +125,13 @@ extension SLRecommendViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         //获取headerView
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewReuseIdentifier, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewReuseIdentifier, for: indexPath) as! SLCollectionHeaderView
         
+        //取出模型
+        let group = recommendVM.anchorGroups[indexPath.section]
+        
+        //给headerView赋值
+        headerView.group = group
         
         return headerView
     }

@@ -23,6 +23,11 @@
 		73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */; };
 		73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */; };
 		73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */; };
+		7375479E1DC1E317009B9036 /* SLNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375479D1DC1E317009B9036 /* SLNetworkTools.swift */; };
+		737547A11DC1E861009B9036 /* SLRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A01DC1E861009B9036 /* SLRecommendViewModel.swift */; };
+		737547A31DC1EC71009B9036 /* Date+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A21DC1EC71009B9036 /* Date+SLExtension.swift */; };
+		737547A51DC1F14B009B9036 /* SLAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A41DC1F14B009B9036 /* SLAnchorGroup.swift */; };
+		737547A71DC1F4BD009B9036 /* SLAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A61DC1F4BD009B9036 /* SLAnchor.swift */; };
 		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
 		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
 		73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */; };
@@ -47,6 +52,11 @@
 		73712D8B1DBDFEA800EED45D /* SLFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFollowViewController.swift; sourceTree = "<group>"; };
 		73712D8D1DBDFEB200EED45D /* SLLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLiveViewController.swift; sourceTree = "<group>"; };
 		73712D8F1DBDFEC100EED45D /* SLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileViewController.swift; sourceTree = "<group>"; };
+		7375479D1DC1E317009B9036 /* SLNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLNetworkTools.swift; sourceTree = "<group>"; };
+		737547A01DC1E861009B9036 /* SLRecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendViewModel.swift; sourceTree = "<group>"; };
+		737547A21DC1EC71009B9036 /* Date+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+SLExtension.swift"; sourceTree = "<group>"; };
+		737547A41DC1F14B009B9036 /* SLAnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAnchorGroup.swift; sourceTree = "<group>"; };
+		737547A61DC1F4BD009B9036 /* SLAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAnchor.swift; sourceTree = "<group>"; };
 		737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageContentView.swift; sourceTree = "<group>"; };
 		737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SLExtension.swift"; sourceTree = "<group>"; };
 		73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SLExtension.swift"; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 		73712D6B1DBDF97D00EED45D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7375479F1DC1E84A009B9036 /* ViewModel */,
 				73712D711DBDFBCA00EED45D /* Model */,
 				73712D721DBDFBCA00EED45D /* View */,
 				73712D701DBDFBCA00EED45D /* Controller */,
@@ -165,6 +176,7 @@
 			children = (
 				73FEADE61DBE29450051A328 /* Extension */,
 				73FEADEB1DBE41A60051A328 /* SLConst.swift */,
+				7375479D1DC1E317009B9036 /* SLNetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -205,6 +217,8 @@
 		73712D741DBDFBDC00EED45D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				737547A41DC1F14B009B9036 /* SLAnchorGroup.swift */,
+				737547A61DC1F4BD009B9036 /* SLAnchor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,11 +302,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7375479F1DC1E84A009B9036 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				737547A01DC1E861009B9036 /* SLRecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		73FEADE61DBE29450051A328 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */,
 				737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */,
+				737547A21DC1EC71009B9036 /* Date+SLExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -446,10 +469,15 @@
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
 				735BBC6C1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift in Sources */,
 				735BBC641DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift in Sources */,
+				737547A51DC1F14B009B9036 /* SLAnchorGroup.swift in Sources */,
 				73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */,
 				736042171DC08CD600AA2928 /* SLRecommendViewController.swift in Sources */,
+				7375479E1DC1E317009B9036 /* SLNetworkTools.swift in Sources */,
+				737547A31DC1EC71009B9036 /* Date+SLExtension.swift in Sources */,
 				736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */,
 				735BBC681DC0DA5600AB9E3C /* SLCollectionNormalCell.swift in Sources */,
+				737547A11DC1E861009B9036 /* SLRecommendViewModel.swift in Sources */,
+				737547A71DC1F4BD009B9036 /* SLAnchor.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,
 				737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */,
 				73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */,
