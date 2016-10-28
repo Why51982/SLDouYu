@@ -39,22 +39,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1万人在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-jB-Vhb">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP5-uH-bC7">
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="54B-Uz-khN"/>
-                            <constraint firstAttribute="width" constant="60" id="AFQ-bV-g17"/>
+                            <constraint firstAttribute="height" constant="20" id="7xH-MN-Y8b"/>
+                            <constraint firstAttribute="width" constant="60" id="UE6-K0-v3k"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="1万人在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
@@ -65,12 +66,18 @@
                 <constraint firstItem="ad0-WA-0Td" firstAttribute="top" secondItem="Fn7-hW-9tS" secondAttribute="bottom" constant="5" id="QLH-pF-TM8"/>
                 <constraint firstAttribute="trailing" secondItem="Fn7-hW-9tS" secondAttribute="trailing" constant="5" id="UfS-Fe-8V1"/>
                 <constraint firstItem="ad0-WA-0Td" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZSI-rj-Jqa"/>
-                <constraint firstItem="JFn-jB-Vhb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ckO-PX-Mj5"/>
+                <constraint firstAttribute="trailing" secondItem="zP5-uH-bC7" secondAttribute="trailing" constant="5" id="aXb-2J-eYK"/>
                 <constraint firstAttribute="trailing" secondItem="pUg-sl-aZv" secondAttribute="trailing" id="dRz-JN-P12"/>
                 <constraint firstItem="pUg-sl-aZv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mFo-ID-jIh"/>
-                <constraint firstAttribute="trailing" secondItem="JFn-jB-Vhb" secondAttribute="trailing" constant="5" id="s8O-6g-4XN"/>
+                <constraint firstItem="zP5-uH-bC7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ry5-e7-x4W"/>
             </constraints>
             <size key="customSize" width="288" height="256"/>
+            <connections>
+                <outlet property="cityLabel" destination="ad0-WA-0Td" id="dVD-ca-RSs"/>
+                <outlet property="nickNameLabel" destination="Fn7-hW-9tS" id="3GS-Mc-aUD"/>
+                <outlet property="onlineLabel" destination="zP5-uH-bC7" id="u9d-Sy-WvV"/>
+                <outlet property="pictureImageView" destination="pUg-sl-aZv" id="IFV-is-3Me"/>
+            </connections>
             <point key="canvasLocation" x="5" y="9"/>
         </collectionViewCell>
     </objects>

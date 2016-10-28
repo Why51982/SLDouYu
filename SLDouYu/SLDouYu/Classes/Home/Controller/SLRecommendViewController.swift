@@ -102,23 +102,26 @@ extension SLRecommendViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //定义cell
-        var cell: UICollectionViewCell!
         
         //取出模型数据
-//        let anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        let anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         
         //获取cell
         if indexPath.section == 1 {
             
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellReuseIdentifier, for: indexPath) as! SLCollectionPrettyCell
+            let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellReuseIdentifier, for: indexPath) as! SLCollectionPrettyCell
+            
+            prettyCell.anchor = anchor
+            
+            return prettyCell
         } else {
             
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellReuseIdentifier, for: indexPath) as! SLCollectionNormalCell
+            let NormalCell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellReuseIdentifier, for: indexPath) as! SLCollectionNormalCell
             
+            NormalCell.anchor = anchor
+            
+            return NormalCell
         }
-        
-        return cell
     }
     
     //定义headerView

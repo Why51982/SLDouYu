@@ -145,6 +145,9 @@ extension SLPageTitleView {
         //获取以前的Label
         let oldLabel = titleLabels[currentIndex]
         
+        //如果再次点击同一Label,就直接返回
+        if currentLabel == oldLabel { return }
+        
         //保存最新Label的下标值
         currentIndex = currentLabel.tag
         

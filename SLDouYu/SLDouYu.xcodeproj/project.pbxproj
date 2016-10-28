@@ -29,6 +29,7 @@
 		737547A51DC1F14B009B9036 /* SLAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A41DC1F14B009B9036 /* SLAnchorGroup.swift */; };
 		737547A71DC1F4BD009B9036 /* SLAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A61DC1F4BD009B9036 /* SLAnchor.swift */; };
 		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
+		73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */; };
 		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
 		73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */; };
 		73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADEB1DBE41A60051A328 /* SLConst.swift */; };
@@ -59,6 +60,7 @@
 		737547A61DC1F4BD009B9036 /* SLAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAnchor.swift; sourceTree = "<group>"; };
 		737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageContentView.swift; sourceTree = "<group>"; };
 		737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SLExtension.swift"; sourceTree = "<group>"; };
+		73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionBaseCell.swift; sourceTree = "<group>"; };
 		73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SLExtension.swift"; sourceTree = "<group>"; };
 		73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageTitleView.swift; sourceTree = "<group>"; };
 		73FEADEB1DBE41A60051A328 /* SLConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLConst.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				735BBC671DC0DA5600AB9E3C /* SLCollectionNormalCell.xib */,
 				735BBC6A1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift */,
 				735BBC6B1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib */,
+				73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			files = (
 				73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */,
 				73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */,
+				73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */,
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
