@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66634E55EA4FA7478C684FC2 /* Pods_SLDouYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DA4B28F1BFD5503D6BC200 /* Pods_SLDouYu.framework */; };
+		735470D41DC4D51B007B7596 /* SLRecommendCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735470D21DC4D51B007B7596 /* SLRecommendCycleCell.swift */; };
+		735470D51DC4D51B007B7596 /* SLRecommendCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735470D31DC4D51B007B7596 /* SLRecommendCycleCell.xib */; };
 		735BBC641DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BBC621DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift */; };
 		735BBC651DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735BBC631DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib */; };
 		735BBC681DC0DA5600AB9E3C /* SLCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BBC661DC0DA5600AB9E3C /* SLCollectionNormalCell.swift */; };
@@ -30,6 +32,9 @@
 		737547A71DC1F4BD009B9036 /* SLAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A61DC1F4BD009B9036 /* SLAnchor.swift */; };
 		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
 		73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */; };
+		73C53FE31DC32F2300CEBE8F /* SLRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */; };
+		73C53FE51DC32F3500CEBE8F /* SLRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */; };
+		73C53FE71DC34AE100CEBE8F /* SLCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE61DC34AE100CEBE8F /* SLCycleModel.swift */; };
 		73FEADE81DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */; };
 		73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */; };
 		73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEADEB1DBE41A60051A328 /* SLConst.swift */; };
@@ -37,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		37312600E75BB5BA17805F56 /* Pods-SLDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLDouYu/Pods-SLDouYu.release.xcconfig"; sourceTree = "<group>"; };
+		735470D21DC4D51B007B7596 /* SLRecommendCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendCycleCell.swift; sourceTree = "<group>"; };
+		735470D31DC4D51B007B7596 /* SLRecommendCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLRecommendCycleCell.xib; sourceTree = "<group>"; };
 		735BBC621DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionHeaderView.swift; sourceTree = "<group>"; };
 		735BBC631DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLCollectionHeaderView.xib; sourceTree = "<group>"; };
 		735BBC661DC0DA5600AB9E3C /* SLCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionNormalCell.swift; sourceTree = "<group>"; };
@@ -61,6 +68,9 @@
 		737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageContentView.swift; sourceTree = "<group>"; };
 		737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SLExtension.swift"; sourceTree = "<group>"; };
 		73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionBaseCell.swift; sourceTree = "<group>"; };
+		73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendCycleView.swift; sourceTree = "<group>"; };
+		73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLRecommendCycleView.xib; sourceTree = "<group>"; };
+		73C53FE61DC34AE100CEBE8F /* SLCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCycleModel.swift; sourceTree = "<group>"; };
 		73FEADE71DBE296C0051A328 /* UIBarButtonItem+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SLExtension.swift"; sourceTree = "<group>"; };
 		73FEADE91DBE3FA80051A328 /* SLPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageTitleView.swift; sourceTree = "<group>"; };
 		73FEADEB1DBE41A60051A328 /* SLConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLConst.swift; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 		73712D711DBDFBCA00EED45D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				73C53FE61DC34AE100CEBE8F /* SLCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +215,10 @@
 			children = (
 				735BBC621DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift */,
 				735BBC631DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib */,
+				73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */,
+				73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */,
+				735470D21DC4D51B007B7596 /* SLRecommendCycleCell.swift */,
+				735470D31DC4D51B007B7596 /* SLRecommendCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,7 +386,7 @@
 			attributes = {
 				CLASSPREFIX = SL;
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "CHEUNGYuk Hang Raymond";
 				TargetAttributes = {
 					73712D531DBDF2B900EED45D = {
@@ -403,10 +418,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735470D51DC4D51B007B7596 /* SLRecommendCycleCell.xib in Resources */,
 				735BBC691DC0DA5600AB9E3C /* SLCollectionNormalCell.xib in Resources */,
 				735BBC651DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib in Resources */,
 				735BBC6D1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib in Resources */,
 				73712D5F1DBDF2B900EED45D /* Assets.xcassets in Resources */,
+				73C53FE51DC32F3500CEBE8F /* SLRecommendCycleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,9 +488,12 @@
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
+				735470D41DC4D51B007B7596 /* SLRecommendCycleCell.swift in Sources */,
+				73C53FE71DC34AE100CEBE8F /* SLCycleModel.swift in Sources */,
 				735BBC6C1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift in Sources */,
 				735BBC641DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift in Sources */,
 				737547A51DC1F14B009B9036 /* SLAnchorGroup.swift in Sources */,
+				73C53FE31DC32F2300CEBE8F /* SLRecommendCycleView.swift in Sources */,
 				73FEADEC1DBE41A60051A328 /* SLConst.swift in Sources */,
 				736042171DC08CD600AA2928 /* SLRecommendViewController.swift in Sources */,
 				7375479E1DC1E317009B9036 /* SLNetworkTools.swift in Sources */,

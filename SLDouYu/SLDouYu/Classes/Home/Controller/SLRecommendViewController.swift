@@ -15,6 +15,8 @@ private let kNormalItemH: CGFloat = kItemW * 3 / 4
 private let kPrettyItemH: CGFloat = kItemW * 4 / 3
 private let kHeaderViewH: CGFloat = 50
 
+private let kCycleViewH: CGFloat = kScreenW * 3 / 8
+
 private let kNormalCellReuseIdentifier = "kNormalCellReuseIdentifier"
 private let kPrettyCellReuseIdentifier = "kPrettyCellReuseIdentifier"
 private let kHeaderViewReuseIdentifier = "kHeaderViewReuseIdentifier"
@@ -52,6 +54,13 @@ class SLRecommendViewController: UIViewController {
         
         return collectionView
     }()
+    /// 创建cycleView
+    fileprivate lazy var cycleView: SLRecommendCycleView = {
+       
+        let cycleView = SLRecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,19 +80,36 @@ extension SLRecommendViewController {
         //添加collectionView
         view.addSubview(collectionView)
         
-        //发送网络请求
+        //将cycleView添加到collectionView上
+        //注意要清空cycle的autoresizingMask,防止其随着父控件的拉升而拉升,造成看不见
+        collectionView.addSubview(cycleView)
+        
+        //调整collectionView的内边距,使cycleView显示出来
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        
+        //发送推荐网络请求
         loadData()
+        
+        //发送轮播的网络请求
+        loadCycleData()
     }
 }
 
 //MARK: - 请求网络数据
 extension SLRecommendViewController {
     
-    //请求网络数据
+    //请求推荐网络数据
     fileprivate func loadData() {
         
         recommendVM.requestData { 
             self.collectionView.reloadData()
+        }
+    }
+    
+    //请求轮播图的网络数据
+    fileprivate func loadCycleData() {
+        recommendVM.requestCycleData { 
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }

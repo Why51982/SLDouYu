@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SLRecommendCycleCell" customModule="SLDouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-fg-fUC">
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="134"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LyO-MH-gV9">
+                        <rect key="frame" x="0.0" y="104" width="349" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼TV直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-U5-tuu">
+                                <rect key="frame" x="10" y="7" width="70" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eWR-U5-tuu" firstAttribute="centerY" secondItem="LyO-MH-gV9" secondAttribute="centerY" id="3Hq-lt-XBK"/>
+                            <constraint firstAttribute="height" constant="30" id="Ixg-Ze-wvB"/>
+                            <constraint firstItem="eWR-U5-tuu" firstAttribute="leading" secondItem="LyO-MH-gV9" secondAttribute="leading" constant="10" id="ZEL-hs-jl1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="QgS-fg-fUC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6gz-w2-p15"/>
+                <constraint firstAttribute="trailing" secondItem="LyO-MH-gV9" secondAttribute="trailing" id="NKf-hR-qbI"/>
+                <constraint firstItem="QgS-fg-fUC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qjh-rv-KTd"/>
+                <constraint firstItem="LyO-MH-gV9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VCI-ja-xDO"/>
+                <constraint firstAttribute="trailing" secondItem="QgS-fg-fUC" secondAttribute="trailing" id="g78-jE-i1t"/>
+                <constraint firstAttribute="bottom" secondItem="QgS-fg-fUC" secondAttribute="bottom" id="gUQ-uE-5vw"/>
+                <constraint firstAttribute="bottom" secondItem="LyO-MH-gV9" secondAttribute="bottom" id="vUL-Li-Z4n"/>
+            </constraints>
+            <size key="customSize" width="349" height="134"/>
+            <connections>
+                <outlet property="iconImageView" destination="QgS-fg-fUC" id="bDD-3M-ke8"/>
+                <outlet property="titleLabel" destination="eWR-U5-tuu" id="oCe-um-M8H"/>
+            </connections>
+            <point key="canvasLocation" x="2.5" y="96"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
+</document>

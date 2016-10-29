@@ -13,6 +13,7 @@ class SLRecommendViewModel {
 
     //MARK: - 懒加载属性
     lazy var anchorGroups: [SLAnchorGroup] = [SLAnchorGroup]()
+    lazy var cycleModels: [SLCycleModel] = [SLCycleModel]()
     fileprivate lazy var bigDataGroup: SLAnchorGroup = SLAnchorGroup()
     fileprivate lazy var prettyGroup: SLAnchorGroup = SLAnchorGroup()
 }
@@ -20,6 +21,7 @@ class SLRecommendViewModel {
 //MARK: - 发送网络请求
 extension SLRecommendViewModel {
     
+    //发送推荐的网络请求
     func requestData(_ finishedCallBack: @escaping () -> ()) {
         //请求参数
         let parameters = ["limit" : "4", "offset" : "0", "time" : Date.getCurrentTime()]
@@ -108,5 +110,29 @@ extension SLRecommendViewModel {
             //回调方法
             finishedCallBack()
         }
+    }
+    
+    //发送轮播图的网络请求
+    func requestCycleData(_ finishedCallBack: @escaping () -> ()) {
+        
+        SLNetworkTools.requestData(SLMethodType.get, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+
+            //把结果转化成字典类型
+            guard let resultDic = result as? [String : Any] else { return }
+            
+            //根据data这个key取出数组
+            guard let dataArray = resultDic["data"] as? [[String : Any]] else { return }
+            
+            //遍历数组
+            for dic in dataArray {
+                
+                let cycleModel = SLCycleModel(dic: dic)
+                self.cycleModels.append(cycleModel)
+            }
+            
+            //回调
+            finishedCallBack()
+        }
+        
     }
 }
