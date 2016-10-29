@@ -42,7 +42,7 @@ extension SLRecommendViewModel {
             guard let dataArray = resultDic["data"] as? [[String : Any]] else { return }
             
             self.bigDataGroup.tag_name = "最热"
-            self.bigDataGroup.icon_url = "home_header_hot"
+            self.bigDataGroup.icon_name = "home_header_hot"
             
             for dic in dataArray {
                 let anchor = SLAnchor(dic: dic)
@@ -65,7 +65,7 @@ extension SLRecommendViewModel {
             guard let dataArray = resultDic["data"] as? [[String : Any]] else { return }
             
             self.prettyGroup.tag_name = "颜值"
-            self.prettyGroup.icon_url = "home_header_phone"
+            self.prettyGroup.icon_name = "home_header_phone"
             
             for dic in dataArray {
                 let anchor = SLAnchor(dic: dic)
@@ -91,7 +91,7 @@ extension SLRecommendViewModel {
             //遍历数组,获取字典,并将字典转化成模型对象
             for dic in dataArray {
                 let group = SLAnchorGroup.init(dic: dic)
-                group.icon_url = "home_header_normal"
+                group.icon_name = "home_header_normal"
                 if group.tag_name == "颜值" {
                     continue
                 }

@@ -23,7 +23,9 @@ class SLAnchorGroup: NSObject {
     /// 组显示的标题
     var tag_name: String = ""
     /// 组显示的图标
-    var icon_url: String = "home_header_hot"
+    var icon_name: String = "home_header_hot"
+    /// 游戏对应的图标
+    var icon_url: String = ""
     /// 定义主播的模型对象数组
     lazy var anchors: [SLAnchor] = [SLAnchor]()
     

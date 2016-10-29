@@ -16,6 +16,7 @@ private let kPrettyItemH: CGFloat = kItemW * 4 / 3
 private let kHeaderViewH: CGFloat = 50
 
 private let kCycleViewH: CGFloat = kScreenW * 3 / 8
+private let kGameViewH: CGFloat = 90
 
 private let kNormalCellReuseIdentifier = "kNormalCellReuseIdentifier"
 private let kPrettyCellReuseIdentifier = "kPrettyCellReuseIdentifier"
@@ -58,8 +59,15 @@ class SLRecommendViewController: UIViewController {
     fileprivate lazy var cycleView: SLRecommendCycleView = {
        
         let cycleView = SLRecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    /// 创建推荐游戏界面
+    fileprivate lazy var gameView: SLRecommendGameView = {
+       
+        let gameView = SLRecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
 
     override func viewDidLoad() {
@@ -84,8 +92,11 @@ extension SLRecommendViewController {
         //注意要清空cycle的autoresizingMask,防止其随着父控件的拉升而拉升,造成看不见
         collectionView.addSubview(cycleView)
         
+        //添加gameView
+        collectionView.addSubview(gameView)
+        
         //调整collectionView的内边距,使cycleView显示出来
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
         
         //发送推荐网络请求
         loadData()
@@ -101,8 +112,12 @@ extension SLRecommendViewController {
     //请求推荐网络数据
     fileprivate func loadData() {
         
-        recommendVM.requestData { 
+        recommendVM.requestData {
+            //刷新表格
             self.collectionView.reloadData()
+            
+            //给GameView赋值
+            self.gameView.groups = self.recommendVM.anchorGroups
         }
     }
     

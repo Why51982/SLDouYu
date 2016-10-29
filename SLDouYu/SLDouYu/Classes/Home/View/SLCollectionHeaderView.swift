@@ -17,7 +17,7 @@ class SLCollectionHeaderView: UICollectionReusableView {
     //MARK: - 定义属性
     var group: SLAnchorGroup? {
         didSet {
-            iconImageView.image = UIImage(named: group?.icon_url ?? "home_header_normal")
+            iconImageView.image = UIImage(named: group?.icon_name ?? "home_header_normal")
             titleLabel.text = group?.tag_name
         }
     }

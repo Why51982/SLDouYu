@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SLRecommendGameCell" customModule="SLDouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-2A-tkp">
+                        <rect key="frame" x="13" y="65" width="54" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="063-uI-UV7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8vx-Hb-gj0">
+                        <rect key="frame" x="18" y="15" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8vx-Hb-gj0" secondAttribute="height" multiplier="1:1" id="wOS-sa-MBI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="22.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Jyy-2A-tkp" secondAttribute="bottom" constant="10" id="17c-uG-a2w"/>
+                <constraint firstItem="8vx-Hb-gj0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Hbr-QA-ORz"/>
+                <constraint firstItem="Jyy-2A-tkp" firstAttribute="top" secondItem="8vx-Hb-gj0" secondAttribute="bottom" constant="5" id="JeE-M4-Skq"/>
+                <constraint firstItem="8vx-Hb-gj0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Sev-vt-tCP"/>
+                <constraint firstItem="Jyy-2A-tkp" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Sqy-GC-Pn6"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="8vx-Hb-gj0" id="wym-3e-h1p"/>
+                <outlet property="titleLabel" destination="Jyy-2A-tkp" id="Myy-U2-neG"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
