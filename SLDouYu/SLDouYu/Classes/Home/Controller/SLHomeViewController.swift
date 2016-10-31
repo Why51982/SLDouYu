@@ -31,7 +31,8 @@ class SLHomeViewController: UIViewController {
         //确定所有子控制器
         var childViewControllers = [UIViewController]()
         childViewControllers.append(SLRecommendViewController())
-        for _ in 0 ..< 3 {
+        childViewControllers.append(SLGameViewController())
+        for _ in 0 ..< 2 {
             let viewController = UIViewController()
             viewController.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childViewControllers.append(viewController)

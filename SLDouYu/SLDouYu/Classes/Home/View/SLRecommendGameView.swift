@@ -15,17 +15,8 @@ private let kCollectionViewEdgesMargin: CGFloat = 10
 class SLRecommendGameView: UIView {
     
     //MARK: - 定义模型属性
-    var groups: [SLAnchorGroup]? {
+    var groups: [SLBaseModel]? {
         didSet {
-            
-            //去除前两组数据
-            groups?.remove(at: 0)
-            groups?.remove(at: 0)
-            
-            //拼接更多一组
-            let moreGroup = SLAnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
             
             //刷新collectionView
             collectionView.reloadData()
@@ -72,7 +63,7 @@ extension SLRecommendGameView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellReuseIdentifier, for: indexPath) as! SLRecommendGameCell
         
         //给cell赋值
-        cell.group = groups![indexPath.item]
+        cell.base = groups![indexPath.item]
         
         return cell        
     }

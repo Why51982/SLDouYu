@@ -34,7 +34,7 @@ class SLRecommendViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 10
-        //设置头部
+        //设置头部的size
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         
         //创建UICollectionView
@@ -116,8 +116,20 @@ extension SLRecommendViewController {
             //刷新表格
             self.collectionView.reloadData()
             
+            //取出数据
+            var groups = self.recommendVM.anchorGroups
+            
+            //去除前两组数据
+            groups.remove(at: 0)
+            groups.remove(at: 0)
+            
+            //拼接更多一组
+            let moreGroup = SLAnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+            
             //给GameView赋值
-            self.gameView.groups = self.recommendVM.anchorGroups
+            self.gameView.groups = groups
         }
     }
     

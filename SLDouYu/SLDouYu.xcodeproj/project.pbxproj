@@ -35,6 +35,10 @@
 		737547A51DC1F14B009B9036 /* SLAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A41DC1F14B009B9036 /* SLAnchorGroup.swift */; };
 		737547A71DC1F4BD009B9036 /* SLAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737547A61DC1F4BD009B9036 /* SLAnchor.swift */; };
 		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
+		737FE49E1DC6F2BF0075D8B4 /* SLGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FE49D1DC6F2BF0075D8B4 /* SLGameModel.swift */; };
+		737FE4A01DC6F6E50075D8B4 /* SLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FE49F1DC6F6E50075D8B4 /* SLBaseModel.swift */; };
+		7389F20D1DC6D28600F1A890 /* SLGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7389F20C1DC6D28600F1A890 /* SLGameViewController.swift */; };
+		7389F20F1DC6D9D000F1A890 /* SLGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7389F20E1DC6D9D000F1A890 /* SLGameViewModel.swift */; };
 		73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */; };
 		73C53FE31DC32F2300CEBE8F /* SLRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */; };
 		73C53FE51DC32F3500CEBE8F /* SLRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */; };
@@ -75,6 +79,10 @@
 		737547A61DC1F4BD009B9036 /* SLAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAnchor.swift; sourceTree = "<group>"; };
 		737AAA731DBEF20C00A86A4E /* SLPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPageContentView.swift; sourceTree = "<group>"; };
 		737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SLExtension.swift"; sourceTree = "<group>"; };
+		737FE49D1DC6F2BF0075D8B4 /* SLGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLGameModel.swift; sourceTree = "<group>"; };
+		737FE49F1DC6F6E50075D8B4 /* SLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SLBaseModel.swift; path = ../../Home/Model/SLBaseModel.swift; sourceTree = "<group>"; };
+		7389F20C1DC6D28600F1A890 /* SLGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLGameViewController.swift; sourceTree = "<group>"; };
+		7389F20E1DC6D9D000F1A890 /* SLGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLGameViewModel.swift; sourceTree = "<group>"; };
 		73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionBaseCell.swift; sourceTree = "<group>"; };
 		73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendCycleView.swift; sourceTree = "<group>"; };
 		73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLRecommendCycleView.xib; sourceTree = "<group>"; };
@@ -206,6 +214,7 @@
 			children = (
 				73712D801DBDFE2800EED45D /* SLHomeViewController.swift */,
 				736042161DC08CD600AA2928 /* SLRecommendViewController.swift */,
+				7389F20C1DC6D28600F1A890 /* SLGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				73C53FE61DC34AE100CEBE8F /* SLCycleModel.swift */,
+				737FE49D1DC6F2BF0075D8B4 /* SLGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 		73712D741DBDFBDC00EED45D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				737FE49F1DC6F6E50075D8B4 /* SLBaseModel.swift */,
 				737547A41DC1F14B009B9036 /* SLAnchorGroup.swift */,
 				737547A61DC1F4BD009B9036 /* SLAnchor.swift */,
 			);
@@ -336,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				737547A01DC1E861009B9036 /* SLRecommendViewModel.swift */,
+				7389F20E1DC6D9D000F1A890 /* SLGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -497,13 +509,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				73712D8E1DBDFEB200EED45D /* SLLiveViewController.swift in Sources */,
+				737FE49E1DC6F2BF0075D8B4 /* SLGameModel.swift in Sources */,
 				73FEADEA1DBE3FA80051A328 /* SLPageTitleView.swift in Sources */,
 				735470D71DC4F472007B7596 /* SLRecommendGameView.swift in Sources */,
 				73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */,
+				7389F20D1DC6D28600F1A890 /* SLGameViewController.swift in Sources */,
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
 				735470D41DC4D51B007B7596 /* SLRecommendCycleCell.swift in Sources */,
+				7389F20F1DC6D9D000F1A890 /* SLGameViewModel.swift in Sources */,
 				73C53FE71DC34AE100CEBE8F /* SLCycleModel.swift in Sources */,
 				735BBC6C1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift in Sources */,
 				735BBC641DC0D5BC00AB9E3C /* SLCollectionHeaderView.swift in Sources */,
@@ -516,6 +531,7 @@
 				737547A31DC1EC71009B9036 /* Date+SLExtension.swift in Sources */,
 				736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */,
 				735BBC681DC0DA5600AB9E3C /* SLCollectionNormalCell.swift in Sources */,
+				737FE4A01DC6F6E50075D8B4 /* SLBaseModel.swift in Sources */,
 				737547A11DC1E861009B9036 /* SLRecommendViewModel.swift in Sources */,
 				737547A71DC1F4BD009B9036 /* SLAnchor.swift in Sources */,
 				73712D811DBDFE2800EED45D /* SLHomeViewController.swift in Sources */,

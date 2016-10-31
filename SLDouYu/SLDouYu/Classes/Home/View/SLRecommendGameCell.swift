@@ -15,12 +15,12 @@ class SLRecommendGameCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     
     //MARK: - 定义模型属性
-    var group: SLAnchorGroup? {
+    var base: SLBaseModel? {
         didSet {
-            titleLabel.text = group?.tag_name
+            titleLabel.text = base?.tag_name
             
             //设置图标
-            let url = URL(string: group?.icon_url ?? "")
+            let url = URL(string: base?.icon_url ?? "")
             iconImageView.kf.setImage(with: url, placeholder: UIImage(named: "home_more_btn"))
         }
     }
