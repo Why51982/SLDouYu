@@ -8,28 +8,38 @@
 
 import UIKit
 
-class SLFunnyViewController: UIViewController {
+private let kTopMargin: CGFloat = 8
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+class SLFunnyViewController: SLBaseAnchorViewController {
     
+    //MARK: - 懒加载
+    fileprivate lazy var funnyVM: SLFunnyViewModel = SLFunnyViewModel()
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//MARK: - 设置UI界面
+extension SLFunnyViewController {
+    
+    override func setupUI() {
+        super.setupUI()
+        
+        //清除组头
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.headerReferenceSize = CGSize.zero
+        collectionView.contentInset = UIEdgeInsets(top: kTopMargin, left: 0, bottom: 0, right: 0)
     }
-    */
+}
 
+//MARK: - 请求数据
+extension SLFunnyViewController {
+    
+    override func loadData() {
+        //给父类模型赋值
+        baseVM = funnyVM
+        
+        //请求数据
+        funnyVM.loadFunnyData { 
+            self.collectionView.reloadData()
+        }
+    }
 }

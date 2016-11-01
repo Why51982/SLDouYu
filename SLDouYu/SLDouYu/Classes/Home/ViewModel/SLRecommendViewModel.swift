@@ -79,7 +79,7 @@ extension SLRecommendViewModel {
         //http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0?time=1477555853
         //请求发起前,进入组
         dGroup.enter()
-        loadAnchorData(urlString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
+        loadAnchorData(isGroupData: true, urlString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             
             //接收数据完毕离开组
             dGroup.leave()

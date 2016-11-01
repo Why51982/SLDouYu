@@ -16,7 +16,7 @@ extension SLAmuseViewModel {
     
     func loadAmuseData(finishedCallBack: @escaping () -> ()) {
         
-        loadAnchorData(urlString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2") {
+        loadAnchorData(isGroupData: true, urlString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2") {
             finishedCallBack()
         }
     }

@@ -16,7 +16,7 @@ class SLBaseViewModel {
 
 extension SLBaseViewModel {
     
-    func loadAnchorData(urlString: String, parameters: [String : Any]? = nil, finishedCallBack: @escaping () -> ()) {
+    func loadAnchorData(isGroupData: Bool, urlString: String, parameters: [String : Any]? = nil, finishedCallBack: @escaping () -> ()) {
         
         SLNetworkTools.requestData(.get, URLString: urlString, parameters: parameters) {
             (result) in
@@ -28,12 +28,23 @@ extension SLBaseViewModel {
             guard let dataArray = resultDic["data"] as? [[String : Any]] else { return }
             
             //遍历数组
-            for dic in dataArray {
-                let anchorGroup = SLAnchorGroup(dic: dic)
-                if anchorGroup.room_list?.count == 0 {
-                    continue
+            if isGroupData {
+                //是组数据
+                for dic in dataArray {
+                    let anchorGroup = SLAnchorGroup(dic: dic)
+                    if anchorGroup.room_list?.count == 0 {
+                        continue
+                    }
+                    self.anchorGroups.append(anchorGroup)
                 }
-                self.anchorGroups.append(anchorGroup)
+            } else { //不是组数据
+                //创建组
+                let group = SLAnchorGroup()
+                for dic in dataArray {
+                    let anchor = SLAnchor(dic: dic)
+                    group.anchors.append(anchor)
+                }
+                self.anchorGroups.append(group)
             }
             
             finishedCallBack()
