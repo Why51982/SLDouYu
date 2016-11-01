@@ -9,10 +9,9 @@
 
 import UIKit
 
-class SLRecommendViewModel {
+class SLRecommendViewModel: SLBaseViewModel {
 
     //MARK: - 懒加载属性
-    lazy var anchorGroups: [SLAnchorGroup] = [SLAnchorGroup]()
     lazy var cycleModels: [SLCycleModel] = [SLCycleModel]()
     fileprivate lazy var bigDataGroup: SLAnchorGroup = SLAnchorGroup()
     fileprivate lazy var prettyGroup: SLAnchorGroup = SLAnchorGroup()
@@ -80,23 +79,7 @@ extension SLRecommendViewModel {
         //http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0?time=1477555853
         //请求发起前,进入组
         dGroup.enter()
-        SLNetworkTools.requestData(SLMethodType.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            
-            //将数据转化成字典
-            guard let resultDic = result as? [String : Any] else { return }
-            
-            //根据data这个key获取数组
-            guard let dataArray = resultDic["data"] as? [[String : Any]] else { return }
-            
-            //遍历数组,获取字典,并将字典转化成模型对象
-            for dic in dataArray {
-                let group = SLAnchorGroup.init(dic: dic)
-                group.icon_name = "home_header_normal"
-                if group.tag_name == "颜值" {
-                    continue
-                }
-                self.anchorGroups.append(group)
-            }
+        loadAnchorData(urlString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             
             //接收数据完毕离开组
             dGroup.leave()

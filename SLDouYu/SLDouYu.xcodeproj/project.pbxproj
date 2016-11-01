@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		66634E55EA4FA7478C684FC2 /* Pods_SLDouYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DA4B28F1BFD5503D6BC200 /* Pods_SLDouYu.framework */; };
+		73074F551DC8443800CD8803 /* SLAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73074F541DC8443800CD8803 /* SLAmuseMenuView.swift */; };
+		73074F571DC8444300CD8803 /* SLAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73074F561DC8444300CD8803 /* SLAmuseMenuView.xib */; };
+		73074F5A1DC8654F00CD8803 /* SLAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73074F581DC8654F00CD8803 /* SLAmuseMenuViewCell.swift */; };
+		73074F5B1DC8654F00CD8803 /* SLAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73074F591DC8654F00CD8803 /* SLAmuseMenuViewCell.xib */; };
 		735470D41DC4D51B007B7596 /* SLRecommendCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735470D21DC4D51B007B7596 /* SLRecommendCycleCell.swift */; };
 		735470D51DC4D51B007B7596 /* SLRecommendCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735470D31DC4D51B007B7596 /* SLRecommendCycleCell.xib */; };
 		735470D71DC4F472007B7596 /* SLRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735470D61DC4F472007B7596 /* SLRecommendGameView.swift */; };
@@ -37,8 +41,12 @@
 		737AAA761DBF045800A86A4E /* UIColor+SLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */; };
 		737FE49E1DC6F2BF0075D8B4 /* SLGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FE49D1DC6F2BF0075D8B4 /* SLGameModel.swift */; };
 		737FE4A01DC6F6E50075D8B4 /* SLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FE49F1DC6F6E50075D8B4 /* SLBaseModel.swift */; };
+		737FE4A21DC73ED10075D8B4 /* SLAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FE4A11DC73ED10075D8B4 /* SLAmuseViewController.swift */; };
+		737FE4A41DC741DD0075D8B4 /* SLAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FE4A31DC741DC0075D8B4 /* SLAmuseViewModel.swift */; };
 		7389F20D1DC6D28600F1A890 /* SLGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7389F20C1DC6D28600F1A890 /* SLGameViewController.swift */; };
 		7389F20F1DC6D9D000F1A890 /* SLGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7389F20E1DC6D9D000F1A890 /* SLGameViewModel.swift */; };
+		739D685B1DC7672C005B21BA /* SLBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D685A1DC7672C005B21BA /* SLBaseViewModel.swift */; };
+		739D685D1DC772A4005B21BA /* SLBaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D685C1DC772A4005B21BA /* SLBaseAnchorViewController.swift */; };
 		73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */; };
 		73C53FE31DC32F2300CEBE8F /* SLRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */; };
 		73C53FE51DC32F3500CEBE8F /* SLRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */; };
@@ -50,6 +58,10 @@
 
 /* Begin PBXFileReference section */
 		37312600E75BB5BA17805F56 /* Pods-SLDouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLDouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLDouYu/Pods-SLDouYu.release.xcconfig"; sourceTree = "<group>"; };
+		73074F541DC8443800CD8803 /* SLAmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAmuseMenuView.swift; sourceTree = "<group>"; };
+		73074F561DC8444300CD8803 /* SLAmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLAmuseMenuView.xib; sourceTree = "<group>"; };
+		73074F581DC8654F00CD8803 /* SLAmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAmuseMenuViewCell.swift; sourceTree = "<group>"; };
+		73074F591DC8654F00CD8803 /* SLAmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		735470D21DC4D51B007B7596 /* SLRecommendCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendCycleCell.swift; sourceTree = "<group>"; };
 		735470D31DC4D51B007B7596 /* SLRecommendCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLRecommendCycleCell.xib; sourceTree = "<group>"; };
 		735470D61DC4F472007B7596 /* SLRecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendGameView.swift; sourceTree = "<group>"; };
@@ -81,8 +93,12 @@
 		737AAA751DBF045800A86A4E /* UIColor+SLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SLExtension.swift"; sourceTree = "<group>"; };
 		737FE49D1DC6F2BF0075D8B4 /* SLGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLGameModel.swift; sourceTree = "<group>"; };
 		737FE49F1DC6F6E50075D8B4 /* SLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SLBaseModel.swift; path = ../../Home/Model/SLBaseModel.swift; sourceTree = "<group>"; };
+		737FE4A11DC73ED10075D8B4 /* SLAmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAmuseViewController.swift; sourceTree = "<group>"; };
+		737FE4A31DC741DC0075D8B4 /* SLAmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAmuseViewModel.swift; sourceTree = "<group>"; };
 		7389F20C1DC6D28600F1A890 /* SLGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLGameViewController.swift; sourceTree = "<group>"; };
 		7389F20E1DC6D9D000F1A890 /* SLGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLGameViewModel.swift; sourceTree = "<group>"; };
+		739D685A1DC7672C005B21BA /* SLBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLBaseViewModel.swift; sourceTree = "<group>"; };
+		739D685C1DC772A4005B21BA /* SLBaseAnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLBaseAnchorViewController.swift; sourceTree = "<group>"; };
 		73C53FE01DC31F0A00CEBE8F /* SLCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLCollectionBaseCell.swift; sourceTree = "<group>"; };
 		73C53FE21DC32F2300CEBE8F /* SLRecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRecommendCycleView.swift; sourceTree = "<group>"; };
 		73C53FE41DC32F3500CEBE8F /* SLRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLRecommendCycleView.xib; sourceTree = "<group>"; };
@@ -182,6 +198,7 @@
 		73712D6D1DBDF97D00EED45D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				739D68591DC7671C005B21BA /* ViewModel */,
 				73712D741DBDFBDC00EED45D /* Model */,
 				73712D751DBDFBDC00EED45D /* View */,
 				73712D731DBDFBDC00EED45D /* Controller */,
@@ -215,6 +232,7 @@
 				73712D801DBDFE2800EED45D /* SLHomeViewController.swift */,
 				736042161DC08CD600AA2928 /* SLRecommendViewController.swift */,
 				7389F20C1DC6D28600F1A890 /* SLGameViewController.swift */,
+				737FE4A11DC73ED10075D8B4 /* SLAmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +259,10 @@
 				735470D81DC4F47E007B7596 /* SLRecommendGameView.xib */,
 				735470DA1DC4FFF2007B7596 /* SLRecommendGameCell.swift */,
 				735470DB1DC4FFF2007B7596 /* SLRecommendGameCell.xib */,
+				73074F541DC8443800CD8803 /* SLAmuseMenuView.swift */,
+				73074F561DC8444300CD8803 /* SLAmuseMenuView.xib */,
+				73074F581DC8654F00CD8803 /* SLAmuseMenuViewCell.swift */,
+				73074F591DC8654F00CD8803 /* SLAmuseMenuViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				73712D7C1DBDFCEC00EED45D /* SLMainViewController.swift */,
+				739D685C1DC772A4005B21BA /* SLBaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +371,15 @@
 			children = (
 				737547A01DC1E861009B9036 /* SLRecommendViewModel.swift */,
 				7389F20E1DC6D9D000F1A890 /* SLGameViewModel.swift */,
+				737FE4A31DC741DC0075D8B4 /* SLAmuseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		739D68591DC7671C005B21BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				739D685A1DC7672C005B21BA /* SLBaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -445,6 +477,8 @@
 				735470D91DC4F47E007B7596 /* SLRecommendGameView.xib in Resources */,
 				735470D51DC4D51B007B7596 /* SLRecommendCycleCell.xib in Resources */,
 				735BBC691DC0DA5600AB9E3C /* SLCollectionNormalCell.xib in Resources */,
+				73074F571DC8444300CD8803 /* SLAmuseMenuView.xib in Resources */,
+				73074F5B1DC8654F00CD8803 /* SLAmuseMenuViewCell.xib in Resources */,
 				735470DD1DC4FFF2007B7596 /* SLRecommendGameCell.xib in Resources */,
 				735BBC651DC0D5BC00AB9E3C /* SLCollectionHeaderView.xib in Resources */,
 				735BBC6D1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.xib in Resources */,
@@ -514,10 +548,12 @@
 				735470D71DC4F472007B7596 /* SLRecommendGameView.swift in Sources */,
 				73C53FE11DC31F0A00CEBE8F /* SLCollectionBaseCell.swift in Sources */,
 				7389F20D1DC6D28600F1A890 /* SLGameViewController.swift in Sources */,
+				739D685D1DC772A4005B21BA /* SLBaseAnchorViewController.swift in Sources */,
 				73712D8C1DBDFEA800EED45D /* SLFollowViewController.swift in Sources */,
 				73712D7D1DBDFCEC00EED45D /* SLMainViewController.swift in Sources */,
 				73712D901DBDFEC100EED45D /* SLProfileViewController.swift in Sources */,
 				735470D41DC4D51B007B7596 /* SLRecommendCycleCell.swift in Sources */,
+				73074F551DC8443800CD8803 /* SLAmuseMenuView.swift in Sources */,
 				7389F20F1DC6D9D000F1A890 /* SLGameViewModel.swift in Sources */,
 				73C53FE71DC34AE100CEBE8F /* SLCycleModel.swift in Sources */,
 				735BBC6C1DC0E3CE00AB9E3C /* SLCollectionPrettyCell.swift in Sources */,
@@ -528,8 +564,12 @@
 				736042171DC08CD600AA2928 /* SLRecommendViewController.swift in Sources */,
 				735470DC1DC4FFF2007B7596 /* SLRecommendGameCell.swift in Sources */,
 				7375479E1DC1E317009B9036 /* SLNetworkTools.swift in Sources */,
+				73074F5A1DC8654F00CD8803 /* SLAmuseMenuViewCell.swift in Sources */,
 				737547A31DC1EC71009B9036 /* Date+SLExtension.swift in Sources */,
 				736042151DC07AC100AA2928 /* SLPageContentView.swift in Sources */,
+				737FE4A21DC73ED10075D8B4 /* SLAmuseViewController.swift in Sources */,
+				737FE4A41DC741DD0075D8B4 /* SLAmuseViewModel.swift in Sources */,
+				739D685B1DC7672C005B21BA /* SLBaseViewModel.swift in Sources */,
 				735BBC681DC0DA5600AB9E3C /* SLCollectionNormalCell.swift in Sources */,
 				737FE4A01DC6F6E50075D8B4 /* SLBaseModel.swift in Sources */,
 				737547A11DC1E861009B9036 /* SLRecommendViewModel.swift in Sources */,

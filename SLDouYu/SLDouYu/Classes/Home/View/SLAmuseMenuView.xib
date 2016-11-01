@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SLAmuseMenuView" customModule="SLDouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PdI-0c-Oc9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VSv-dK-s9L">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="G6g-am-ESk"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="MB1-GR-0eO"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="E4k-Hf-PfX">
+                    <rect key="frame" x="168" y="168" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.52694839640000002" blue="0.31616481019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PdI-0c-Oc9" secondAttribute="trailing" id="8Ro-fy-gEy"/>
+                <constraint firstAttribute="bottom" secondItem="E4k-Hf-PfX" secondAttribute="bottom" constant="-5" id="J4S-gp-0yH"/>
+                <constraint firstItem="PdI-0c-Oc9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SOv-Fe-Y3z"/>
+                <constraint firstItem="E4k-Hf-PfX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZmH-5i-JQI"/>
+                <constraint firstItem="E4k-Hf-PfX" firstAttribute="top" secondItem="PdI-0c-Oc9" secondAttribute="bottom" id="gyE-gL-gK5"/>
+                <constraint firstItem="PdI-0c-Oc9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rxq-cw-U31"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="PdI-0c-Oc9" id="HGJ-th-kIH"/>
+                <outlet property="pageControl" destination="E4k-Hf-PfX" id="g5x-SH-N36"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="58"/>
+        </view>
+    </objects>
+</document>
