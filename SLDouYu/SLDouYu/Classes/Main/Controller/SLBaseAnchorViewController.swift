@@ -91,7 +91,8 @@ extension SLBaseAnchorViewController {
     }
 }
 
-extension SLBaseAnchorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+//MARK: - UICollectionViewDataSource
+extension SLBaseAnchorViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -110,6 +111,7 @@ extension SLBaseAnchorViewController: UICollectionViewDataSource, UICollectionVi
         //取出模型
         let amuseModel = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         
+        //给cell赋值
         cell.anchor = amuseModel
         
         return cell
@@ -117,13 +119,48 @@ extension SLBaseAnchorViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
+        //取出headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewReuseIdentifier, for: indexPath) as! SLCollectionHeaderView
         
+        //取出模型，并给模型赋值
         let group = baseVM.anchorGroups[indexPath.section]
         group.icon_name = "home_header_normal"
         headerView.group = group
         
         return headerView
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension SLBaseAnchorViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //取出主播信息
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        //判断是什么房间
+        anchor.isVertical == 0 ? pushViewController() : presentViewController()
+    }
+    
+    //UINavigationController的形式弹出房间
+    private func pushViewController() {
+        
+        //创建控制器
+        let viewController = SLRoomNormalViewController()
+        
+        //push
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    //以modol的形式弹出房间
+    private func presentViewController() {
+        
+        //创建控制器
+        let viewController = SLRoomShowViewController()
+        
+        //present
+        present(viewController, animated: true, completion: nil)
     }
 }
 

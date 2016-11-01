@@ -48,7 +48,7 @@ extension SLMainViewController {
     private func addChildViewController(viewController: UIViewController, title: String, imageName: String) {
     
         //创建导航控制器
-        let navigation = UINavigationController(rootViewController: viewController)
+        let navigation = SLNavigationController(rootViewController: viewController)
         //设置tabBar的标题
         viewController.tabBarItem.title = title
         
