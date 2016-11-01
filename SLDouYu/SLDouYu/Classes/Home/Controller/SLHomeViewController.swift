@@ -33,11 +33,7 @@ class SLHomeViewController: UIViewController {
         childViewControllers.append(SLRecommendViewController())
         childViewControllers.append(SLGameViewController())
         childViewControllers.append(SLAmuseViewController())
-        for _ in 0 ..< 1 {
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childViewControllers.append(viewController)
-        }
+        childViewControllers.append(SLFunnyViewController())
         
         let pageContentView = SLPageContentView(frame: contentFrame, childViewControllers: childViewControllers, parentViewController: self)
         pageContentView.delegate = self
