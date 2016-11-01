@@ -19,7 +19,7 @@ private let kGameViewH: CGFloat = 90
 private let kHeaderViewReuseIdentifier = "kHeaderViewReuseIdentifier"
 private let kGameViewCellReuseIdentifier = "kGameViewCellReuseIdentifier"
 
-class SLGameViewController: UIViewController {
+class SLGameViewController: SLBaseViewController {
     
     //MARK: - 懒加载
     fileprivate lazy var gameVM: SLGameViewModel = SLGameViewModel()
@@ -86,13 +86,19 @@ extension SLGameViewController {
             
             //展示常见游戏
             self.gameView.groups = Array(self.gameVM.games[0 ..< 10])
+            
+            //停止动画，并显示collectionView
+            self.loadDataFinished()
         }
     }
 }
 
 //MARK: - 设置UI界面
 extension SLGameViewController {
-    fileprivate func setupUI() {
+    override func setupUI() {
+        
+        //给父控件的contentView赋值
+        contentView = collectionView
         
         //添加collectionView
         view.addSubview(collectionView)
@@ -103,6 +109,8 @@ extension SLGameViewController {
         
         //给collectionView设置内边距
         collectionView.contentInset = UIEdgeInsets(top: kHeaderViewH + kGameViewH, left: 0, bottom: 0, right: 0)
+        
+        super.setupUI()
     }
 }
 

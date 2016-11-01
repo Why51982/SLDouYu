@@ -93,6 +93,9 @@ extension SLRecommendViewController {
             
             //给GameView赋值
             self.gameView.groups = groups
+            
+            //停止动画，并显示collectionView
+            self.loadDataFinished()
         }
     }
     

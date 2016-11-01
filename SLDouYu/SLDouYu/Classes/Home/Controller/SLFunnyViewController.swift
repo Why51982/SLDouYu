@@ -40,6 +40,9 @@ extension SLFunnyViewController {
         //请求数据
         funnyVM.loadFunnyData { 
             self.collectionView.reloadData()
+            
+            //停止动画，并显示collectionView
+            self.loadDataFinished()
         }
     }
 }

@@ -68,6 +68,9 @@ extension SLAmuseViewController {
             var tempGroups = self.amuseVM.anchorGroups
             tempGroups.removeFirst()
             self.amuseMenuView.groups = tempGroups
+            
+            //停止动画，并显示collectionView
+            self.loadDataFinished()
         }
     }
 }

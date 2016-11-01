@@ -22,7 +22,7 @@ private let kNormalCellReuseIdentifier = "kNormalCellReuseIdentifier"
 private let kPrettyCellReuseIdentifier = "kPrettyCellReuseIdentifier"
 private let kHeaderViewReuseIdentifier = "kHeaderViewReuseIdentifier"
 
-class SLBaseAnchorViewController: UIViewController {
+class SLBaseAnchorViewController: SLBaseViewController {
 
     //MARK: - 懒加载
     var baseVM: SLBaseViewModel!
@@ -79,9 +79,15 @@ extension SLBaseAnchorViewController {
 //MARK: - 设置UI界面
 extension SLBaseAnchorViewController {
     
-    func setupUI() {
+    override func setupUI() {
         
+        //给父控件的contentView赋值
+        contentView = collectionView
+        
+        //添加collectionView
         view.addSubview(collectionView)
+        
+        super.setupUI()
     }
 }
 
